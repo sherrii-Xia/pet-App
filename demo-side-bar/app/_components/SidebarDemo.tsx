@@ -11,14 +11,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
+import { HiOutlineHome } from "react-icons/hi";
+import { HiOutlineCalendarDays } from "react-icons/hi2";
 export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
   const links = [
     {
       label: "Dashboard",
       href: "#",
       icon: (
-        <IconBrandTabler className="text-white bg-clip-text bg-gradient-to-r from-secondary to-secondary-light dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <HiOutlineHome  className="text-white bg-clip-text bg-gradient-to-r from-secondary to-secondary-light dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -28,6 +29,13 @@ export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
         <IconUserBolt className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
+    {
+        label: "Bookings",
+        href: "#",
+        icon: (
+          <HiOutlineCalendarDays  className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        ),
+      },
     {
       label: "Settings",
       href: "#",
@@ -105,7 +113,7 @@ export const LogoIcon = () => {
   return (
     <Link
       href="#"
-      className="font-normal flex space-x-2 items-center text-sm text-white py-1 relative z-20"
+      className="font-normal flex space-x-2 items-center seco-sm text-white py-1 relative z-20"
     >
       <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
     </Link>
