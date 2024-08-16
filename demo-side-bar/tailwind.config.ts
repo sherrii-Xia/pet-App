@@ -29,11 +29,12 @@ const config: Config = {
         },
         text: {
           DEFAULT: "#1F2937", // Default text color (dark gray)
-          light: "#F9FDF9", // Light text color
+          light: "#1F2937", // Light text color
         },
       },
     },
   },
   plugins: [],
 };
+
 export default config;
