@@ -66,9 +66,13 @@ export function SidebarDemo({
         <SidebarBody className="justify-between gap-10 bg-primary ">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
-            <div className=" mt-8 flex flex-col gap-2 ">
+            <div className="mt-8 flex flex-col gap-4 ">
               {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} className="text-white hover:text-secondary-light" />
+                <SidebarLink
+                  key={idx}
+                  link={link}
+                  className="text-white hover:text-secondary-light"
+                />
               ))}
             </div>
           </div>
