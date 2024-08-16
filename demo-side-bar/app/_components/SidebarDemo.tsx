@@ -13,13 +13,23 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { HiOutlineHome } from "react-icons/hi";
 import { HiOutlineCalendarDays } from "react-icons/hi2";
-export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
+export function SidebarDemo({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   const links = [
     {
       label: "Dashboard",
       href: "#",
       icon: (
-        <HiOutlineHome  className="text-white bg-clip-text bg-gradient-to-r from-secondary to-secondary-light dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <HiOutlineHome className=" text-white bg-clip-text bg-gradient-to-r from-secondary to-secondary-light dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+
+    {
+      label: "Bookings",
+      href: "#",
+      icon: (
+        <HiOutlineCalendarDays className=" text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -29,13 +39,6 @@ export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
         <IconUserBolt className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
-    {
-        label: "Bookings",
-        href: "#",
-        icon: (
-          <HiOutlineCalendarDays  className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-        ),
-      },
     {
       label: "Settings",
       href: "#",
@@ -63,14 +66,15 @@ export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
         <SidebarBody className="justify-between gap-10 bg-primary ">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
-            <div className=" mt-8 flex flex-col gap-2">
+            <div className=" mt-8 flex flex-col gap-2 ">
               {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} className="text-white"/>
+                <SidebarLink key={idx} link={link} className="text-white hover:text-secondary-light" />
               ))}
             </div>
           </div>
           <div>
-            <SidebarLink className="text-white"
+            <SidebarLink
+              className="text-white"
               link={{
                 label: "Manu Arora",
                 href: "#",
@@ -88,7 +92,7 @@ export function SidebarDemo({children} : Readonly<{children:React.ReactNode}>) {
           </div>
         </SidebarBody>
       </Sidebar>
-       {children}
+      {children}
     </div>
   );
 }
@@ -122,7 +126,5 @@ export const LogoIcon = () => {
 
 // Dummy dashboard component with content
 const Dashboard = () => {
-  return (
-<h1> hello</h1>
-  );
+  return <h1> hello</h1>;
 };
