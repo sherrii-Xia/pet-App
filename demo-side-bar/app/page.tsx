@@ -3,9 +3,9 @@ import { SidebarDemo } from "./_components/SidebarDemo";
 import MainContent from "./_components/MyDashboard";
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex-1">
 
-      <SidebarDemo> <MainContent/> </SidebarDemo> 
+    <MainContent/>  
 
 
     </main>

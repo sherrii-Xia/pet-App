@@ -13,13 +13,14 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { HiOutlineHome } from "react-icons/hi";
 import { HiOutlineCalendarDays } from "react-icons/hi2";
+import { HiOutlineMapPin } from "react-icons/hi2";
 export function SidebarDemo({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const links = [
     {
       label: "Dashboard",
-      href: "#",
+      href: "/",
       icon: (
         <HiOutlineHome className=" text-white bg-clip-text bg-gradient-to-r from-secondary to-secondary-light dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -27,21 +28,28 @@ export function SidebarDemo({
 
     {
       label: "Bookings",
-      href: "#",
+      href: "/bookings",
       icon: (
         <HiOutlineCalendarDays className=" text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
+      label: "Map",
+      href: "/maps",
+      icon: (
+        <HiOutlineMapPin className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
       label: "Profile",
-      href: "#",
+      href: "/profile",
       icon: (
         <IconUserBolt className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Settings",
-      href: "#",
+      href: "/settings",
       icon: (
         <IconSettings className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
