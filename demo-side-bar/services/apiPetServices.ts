@@ -7,5 +7,8 @@ export async function getPetService() {
     console.log(error);
     throw new Error("Failed to get Pet Services");
   }
+
+  // console.log(data);
+
   return data;
 }
