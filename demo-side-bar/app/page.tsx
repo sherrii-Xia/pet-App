@@ -1,13 +1,17 @@
 import Image from "next/image";
-import { SidebarDemo } from "./_components/SidebarDemo";
 import MainContent from "./_components/MyDashboard";
+import MyQueryProvider from "./_components/MyQueryProvider";
+
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex-1">
+      {/* <QueryClientProvider client={queryClient}> */}
+      {/* <ReactQueryDevtools initialIsOpen={false} />  */}
+      <MyQueryProvider>
+        <MainContent />
+      </MyQueryProvider>
 
-      <SidebarDemo> <MainContent/> </SidebarDemo> 
-
-
+      {/* </QueryClientProvider> */}
     </main>
   );
 }
