@@ -6,13 +6,12 @@ import { ExpandableCardDemo } from "../_components/PetServicesCard";
 function DisplayPS() {
   const {
     isLoading,
-    data: PetServices,
+    data,
     error,
   } = useQuery({
     queryKey: ["PetServices"],
     queryFn: getPetService,
   });
-  //console.log(x);
 
   if (isLoading)
     return (
@@ -23,7 +22,7 @@ function DisplayPS() {
       </>
     );
 
-  return <div className="p-4"> <ExpandableCardDemo /> </div>;
+  return <div className="p-4"> <ExpandableCardDemo  pss = {data}/> </div>;
 }
 
 export default DisplayPS;
