@@ -23,6 +23,7 @@
 // app/layout.tsx
 import "./globals.css";
 import { SidebarDemo } from "./_components/SidebarDemo";
+import MyQueryProvider from "./_components/MyQueryProvider";
 
 export default function RootLayout({
   children,
@@ -31,8 +32,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+        <head>
+          <title>Pet Community</title>
+        </head>
       <body>
+      <MyQueryProvider>
         <SidebarDemo>{children}</SidebarDemo>
+        </MyQueryProvider>
       </body>
     </html>
   );

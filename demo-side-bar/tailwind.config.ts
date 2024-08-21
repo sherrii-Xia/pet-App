@@ -32,6 +32,9 @@ const config: Config = {
           light: "#1F2937", // Light text color
         },
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

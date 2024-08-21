@@ -11,7 +11,7 @@ const queryClient = new QueryClient({
 });
 export default function MyQueryProvider({ children }) {
   return (
-    <main className="flex-1">
+    <main className="flex-1 ">
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         {children}
