@@ -44,9 +44,18 @@ export function ExpandableCardDemo({ pss }) {
   });
   console.log(pss);
 
-  const getIcon = () => {
-    
-  }
+  const getBadges = (animals, id) => {
+    return animals.map((animal) => {
+      return (
+        <span
+          key={id}
+          className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+        >
+          {animal}
+        </span>
+      );
+    });
+  };
   return (
     <>
       <AnimatePresence>
@@ -153,7 +162,7 @@ export function ExpandableCardDemo({ pss }) {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div> here</div>
+            <div className="pb-1"> {getBadges(card.restrictions.animals, card.id)}</div>
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
